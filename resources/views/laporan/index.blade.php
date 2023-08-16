@@ -56,18 +56,22 @@
                                 </div>
                                 <div class="col-6">
                                     <button type="submit" class="btn btn-primary">Tampilkan</button>
-                                    @if ($tahun)
-                                        <a href="http://tes-web.landa.id/intermediate/menu" target="_blank" rel="Array Menu" class="btn btn-secondary">Json Menu</a>
-                                        <a href="http://tes-web.landa.id/intermediate/transaksi?tahun={{$tahun}}" target="_blank" rel="Array Transaksi" class="btn btn-secondary">
+                                    @if ($tahun == '2021' || $tahun == "2022")
+                                        <a href="http://tes-web.landa.id/intermediate/menu" target="_blank"
+                                            rel="Array Menu" class="btn btn-secondary">Json Menu</a>
+                                        <a href="http://tes-web.landa.id/intermediate/transaksi?tahun={{ $tahun }}"
+                                            target="_blank" rel="Array Transaksi" class="btn btn-secondary">
                                             Json Transaksi
                                         </a>
-                                        <a href="{{ route('downloadHtml'.$tahun) }}" target="_blank" rel="Array Transaksi" class="btn btn-secondary" download="webpage.html">Download HTML</a>
+                                        <a href="{{ route('downloadHtml' . $tahun) }}" target="_blank"
+                                            rel="Array Transaksi" class="btn btn-secondary"
+                                            download="webpage.html">Download HTML</a>
                                     @endif
                                 </div>
                             </div>
                         </form>
                         <div class="table-responsive">
-                            @if ($tahun)
+                            @if ($tahun == "2021" || $tahun == "2022")
                                 <table class="table table-hover table-bordered" style="margin: 0;">
                                     <thead>
                                         <tr class="table-dark">
